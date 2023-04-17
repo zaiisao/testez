@@ -1,5 +1,6 @@
 local Expectation = require(script.Expectation)
 local TestBootstrap = require(script.TestBootstrap)
+local TestBootstrapLune = require(script.TestBootstrapLune)
 local TestEnum = require(script.TestEnum)
 local TestPlan = require(script.TestPlan)
 local TestPlanner = require(script.TestPlanner)
@@ -23,6 +24,7 @@ local TestEZ = {
 
 	Expectation = Expectation,
 	TestBootstrap = TestBootstrap,
+	TestBootstrapLune = TestBootstrapLune,
 	TestEnum = TestEnum,
 	TestPlan = TestPlan,
 	TestPlanner = TestPlanner,

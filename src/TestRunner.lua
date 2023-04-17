@@ -10,7 +10,7 @@ local TestEnum = require(script.Parent.TestEnum)
 local TestSession = require(script.Parent.TestSession)
 local LifecycleHooks = require(script.Parent.LifecycleHooks)
 
-local RUNNING_GLOBAL = "__TESTEZ_RUNNING_TEST__"
+-- local RUNNING_GLOBAL = "__TESTEZ_RUNNING_TEST__"
 
 local TestRunner = {
 	environment = {}
@@ -58,7 +58,7 @@ function TestRunner.runPlanNode(session, planNode, lifecycleHooks)
 		-- Any code can check RUNNING_GLOBAL to fork behavior based on
 		-- whether a test is running. We use this to avoid accessing
 		-- protected APIs; it's a workaround that will go away someday.
-		_G[RUNNING_GLOBAL] = true
+		-- _G[RUNNING_GLOBAL] = true
 
 		messagePrefix = messagePrefix or ""
 
@@ -97,7 +97,7 @@ function TestRunner.runPlanNode(session, planNode, lifecycleHooks)
 			errorMessage = nodeResult
 		end
 
-		_G[RUNNING_GLOBAL] = nil
+		-- _G[RUNNING_GLOBAL] = nil
 
 		return success, errorMessage
 	end
